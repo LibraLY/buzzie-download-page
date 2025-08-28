@@ -1,15 +1,17 @@
-/* 全局样式变量 */
+/* 全局样式变量 - 蜜境理财主题 */
 :root {
-  --primary-color: #4CAF50;
-  --primary-light: #E8F5E9;
-  --primary-dark: #2E7D32;
+  --primary-color: #F4A460; /* 蜂蜜金 */
+  --primary-light: #FDF5E6; /* 浅蜂蜜色 */
+  --primary-dark: #D2691E; /* 深蜂蜜色 */
+  --secondary-color: #2E4A6B; /* 深蓝色 - 专业信赖 */
+  --accent-color: #4CAF50; /* 翠绿色 - 成长希望 */
   --text-color: #333333;
   --text-light: #666666;
   --background-color: #FFFFFF;
-  --background-alt: #F8F9FA;
-  --border-color: #EEEEEE;
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --border-radius: 8px;
+  --background-alt: #FFFAF0; /* 花白色背景 */
+  --border-color: #F5DEB3; /* 小麦色边框 */
+  --shadow: 0 5px 15px rgba(244, 164, 96, 0.15); /* 蜂蜜金阴影 */
+  --border-radius: 12px; /* 更圆润的边角，像蜂巢 */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -76,12 +78,13 @@ a:hover {
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--text-color);
-  border: 2px solid var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-light);
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 /* 导航栏 */
@@ -205,9 +208,17 @@ nav .container {
 
 #features h2 {
   text-align: center;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   font-size: 2.5rem;
   color: var(--text-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-size: 1.2rem;
+  color: var(--text-light);
+  font-style: italic;
 }
 
 .features-grid {
@@ -219,7 +230,7 @@ nav .container {
 .feature {
   background-color: var(--background-color);
   border-radius: var(--border-radius);
-  padding: var(--space-lg);
+  padding: var(--space-md) var(--space-sm) var(--space-lg);
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
@@ -230,18 +241,65 @@ nav .container {
 }
 
 .feature img {
-  height: 120px;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
   margin-bottom: var(--space-md);
 }
 
 .feature h3 {
   font-size: 1.5rem;
   margin-bottom: var(--space-sm);
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .feature p {
   color: var(--text-light);
+}
+
+/* 理念区 */
+#philosophy {
+  padding: var(--space-xl) 0;
+  background-color: var(--primary-light);
+}
+
+#philosophy h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.philosophy-item {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--border-color);
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.philosophy-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-sm);
+  color: var(--secondary-color);
+}
+
+.philosophy-item p {
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 /* 下载区 */
@@ -409,4 +467,4 @@ footer p {
     flex-direction: column;
     gap: var(--space-sm);
   }
-} 
+}
